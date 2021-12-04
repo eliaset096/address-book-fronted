@@ -12,14 +12,12 @@ function App() {
         <HeaderComponent />
         <div className="container">
             <Routes>
-              <Route path="/" component = {ContactListComponent}></Route>
-              <Route path="/contacts" component = {ContactListComponent}></Route>
+              <Route exact path="/" component = {ContactListComponent}></Route>
+              <Route  path="/contacts" component = {ContactListComponent}></Route>
+              <Route  path="/add" component = {AddContactComponent} ></Route>
+              <Route  path="/update/:contId" component = {AddContactComponent}></Route>
             </Routes>
             <ContactListComponent />
-            <Routes>
-              <Route path="/add-contact" component = {AddContactComponent}></Route>
-              <Route path="/modify-contact/:contact" component = {AddContactComponent}></Route>
-            </Routes>
         </div>
         <FooterComponent />
       </Router>

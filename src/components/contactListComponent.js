@@ -33,7 +33,7 @@ const ContactListComponent = () => {
     return (
         <div className="container">
             <h2  className="text-center"> Lista de Contactos </h2>
-            <Link to="/add-contact/" className="btn btn-primary mb-2"> Agregar Contacto </Link>
+            <Link to="/add" className="btn btn-primary mb-2"> Agregar Contacto </Link>
             <table className="table table-bordered table-striped">
                 <thead>
                     <th> Nombre</th>
@@ -58,7 +58,7 @@ const ContactListComponent = () => {
                                 <td>{contact.company}</td>
                                 <td>{contact.jobPosition}</td>
                                 <td>
-                                    <Link to={`/modify-contact/${contact.contId}`} className="btn btn-info"> Modificar </Link>
+                                    <Link to={`/update/${contact.contId}`} className="btn btn-info"> Modificar </Link>
                                     <button className="btn  btn-danger" onClick={()=>deleteContact(contact)} style={{marginLeft:"10px"}}> Borrar </button>
                                 </td>
                             </tr>
